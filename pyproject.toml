@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weread-poster"
+version = "1.0.0"
+description = "微信读书阅读时长热力图 — Agent API Gateway 数据 + GitHub 风格渲染"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28.0",
+    "svgwrite>=1.4.1",
+    "colour>=0.1.5",
+]
+
+[project.scripts]
+weread-poster = "weread_poster.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["weread_poster*"]
