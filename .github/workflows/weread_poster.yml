@@ -1,10 +1,13 @@
 name: Generate WeRead Heatmap
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    # 每天北京时间凌晨 05:00 和 17:00 (对应 UTC 21:00 和 09:00) 自动定时运行
-    - cron: '0 9,21 * * *'
-  workflow_dispatch: # 支持手动点击触发按钮运行
+    - cron: '0 9 * * *'
+    - cron: '0 21 * * *'
+  workflow_dispatch:
 
 jobs:
   generate:
