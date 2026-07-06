@@ -77,22 +77,22 @@ def build_parser():
         dest="text_color",
         metavar="COLOR",
         type=str,
-        default="#FFFFFF",
-        help='文字色（默认: "#FFFFFF"）',
+        default=None,
+        help="文字色（默认: 使用主题文字色）",
     )
     parser.add_argument(
         "--special-color1",
         dest="special_color1",
         metavar="COLOR",
-        default="yellow",
-        help='特殊色1（默认: yellow）',
+        default=None,
+        help="特殊色1（默认: 使用主题色1）",
     )
     parser.add_argument(
         "--special-color2",
         dest="special_color2",
         metavar="COLOR",
-        default="red",
-        help="特殊色2（默认: red）",
+        default=None,
+        help="特殊色2（默认: 使用主题色2）",
     )
     parser.add_argument(
         "--with-animation",
