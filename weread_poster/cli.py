@@ -134,7 +134,6 @@ def apply_theme(p: Poster, theme_name: str):
     p.colors["track"] = levels[0]
     p.colors["special"] = levels[1]
     p.colors["special2"] = levels[4]
-    p.colors["text"] = theme["text"]
 
 
 def main():

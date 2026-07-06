@@ -149,7 +149,7 @@ Drawer (SVG 渲染) → GitHub 风格热力图
 
 1. **配置 Secret 密钥**：在 GitHub 仓库的 **Settings ➔ Secrets and variables ➔ Actions** 中，点击 **New repository secret**，添加名为 `WEREAD_API_KEY` 的密钥，内容填入你的微信读书 API Key。
 2. **开启读写授权**：导航到 **Settings ➔ Actions ➔ General**，滚动至最下方的 **Workflow permissions**，将权限选项修改为 **Read and write permissions** 并保存（这允许机器人定时运行后自动提交生成的 SVG 回仓库）。
-3. **配置文件位置**：工作流配置在 [.github/workflows/weread_poster.yml](.github/workflows/weread_poster.yml) 中，默认每天北京时间 05:00 和 17:00 自动执行一次。
+3. **配置文件位置**：工作流配置在 [.github/workflows/weread_poster.yml](.github/workflows/weread_poster.yml) 中，默认每天北京时间 05:00 自动执行一次。
 4. **深入了解 Actions**：更详细的定时原理、防死循环构建（[skip ci]）等高级细节请阅读教程：[第 04 章：自动运维 — 结合 GitHub Actions 实现每日定时渲染与发布](docs/tutorial/04-github-actions-deployment.md)。
 
 ## 自动化测试

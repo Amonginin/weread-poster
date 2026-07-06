@@ -108,7 +108,6 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 9 * * *'
     - cron: '0 21 * * *'
   workflow_dispatch:
 ```
@@ -205,7 +204,7 @@ GitHub Actions 具备内部敏感信息脱敏功能。任何通过 `${{ secrets.
 
 | 知识点 | 概念导论中的解释 | 源码中的位置 | 关键行为 |
 | :--- | :--- | :--- | :--- |
-| **世界标准时换算** | 中国时间减 8 小时即为 UTC 触发时间 | [.github/workflows/weread_poster.yml](file:///d:/coding/personalProj/weread-poster/.github/workflows/weread_poster.yml#L7) | `cron: '0 9 * * *'` 等对应北京 17 点与 5 点 |
+| **世界标准时换算** | 中国时间减 8 小时即为 UTC 触发时间 | [.github/workflows/weread_poster.yml](file:///d:/coding/personalProj/weread-poster/.github/workflows/weread_poster.yml#L7) | `cron: '0 21 * * *'` 对应北京时间早晨 5 点 |
 | **写回权限** | 虚拟机临时 Token 必须具有 Write 权限 | [.github/workflows/weread_poster.yml](file:///d:/coding/personalProj/weread-poster/.github/workflows/weread_poster.yml#L12) | `permissions: contents: write` |
 | **流水线缓存** | 利用 setup-python 缓存已下载的库 | [.github/workflows/weread_poster.yml](file:///d:/coding/personalProj/weread-poster/.github/workflows/weread_poster.yml#L22) | `cache: 'pip'` 加速后继运行 |
 | **CI 循环拦截** | 使用提交修饰符跳过后续触发 | [.github/workflows/weread_poster.yml](file:///d:/coding/personalProj/weread-poster/.github/workflows/weread_poster.yml#L44) | `[skip ci]` 阻断持续触发 |
@@ -236,7 +235,7 @@ GitHub Actions 自动运维部署
 
 ## 8. 思考题
 
-### 题目 1：在配置定时 Cron `'0 9 * * *'` 时，为什么不推荐将其写为零整点，如 `'0 0 * * *'`？
+### 题目 1：在配置定时 Cron `'0 21 * * *'` 时，为什么不推荐将其写为零整点，如 `'0 0 * * *'`？
 
 <details>
 <summary>参考解答</summary>
